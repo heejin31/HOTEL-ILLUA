@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #cacaca;
+}
+
+#header_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 5;
+    color: #fff; /* 태그들의 color: inherit; 을 위해 지정해줌*/
+    transition: 400ms;
+}
+
+#header_wrap.scroll {
+    background: #fff;
+    color: #000; /* 태그들의 color: inherit; 을 위해 지정해줌*/
+}
+
+header {
+    margin: 0 5vw;
+    position: relative; /*logo포지션의 기준점*/
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: 400ms;
+}
+.logo a {
+    display: block; /*줄바꿈을 위해*/
+    color: #fff;
+    font-weight: normal;
+    line-height: 1;
+    color: inherit;    
+}
+.logo01 {
+    display: block; /*줄바꿈을 위해*/
+    font-size: 1rem; /*16px*/
+    text-align: center;
+    letter-spacing: 5px;
+}
+.logo02 {
+    display: block; /*줄바꿈을 위해*/
+    font-size: 2.5rem; 
+    letter-spacing: 3px;
+}
+.menu_container {    
+    text-align: center;
+    width: 100%;/*화면 꽉차게*/ 
+    padding: 30px;  /*헤더역할*/
+}
+
+#menu {
+    display: inline-block;
+}
+#menu >li {
+    display: inline-block;
+}
+#menu >li > a {
+    display:block;
+    padding: 15px 20px;
+    color: inherit;
+}
+.global_container {
+    position: absolute;
+    right: 190px;
+    top: 45px;
+}
+.global_container >a {
+    color: inherit;
+    font-size: 0.8rem;
+
+}
+
+.resevation_container {
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+.resevation_container >a {
+    display: block;
+    padding: 15px 30px;
+    border:1px solid #fff;
+    color: inherit;
+    transition: 0.4s;
+}
+#header_wrap.scroll .resevation_container >a {
+    border: 1px solid #000;
+}
+
+.resevation_container a:hover {
+    color: #000;
+    background: #fff;
+}
+
+#header_wrap.scroll .resevation_container a:hover {
+    color: #fff;
+    background: #000;
+}
+
+.m_menuBtn {
+    display: none;    
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 24px;
+    height: 24px;
+}
+.m_menuBtn span {    
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    transition: 400ms;
+}
+#header_wrap.scroll .m_menuBtn span {    
+    background: #000;
+}
+
+.m_menuBtn_line1 {
+    top:5px;
+}
+.m_menuBtn_line2 {
+    top:14px;
+}
+
+.m_menuBtn.on span {}
+
+.m_menuBtn.on .m_menuBtn_line1 {
+    transform: rotate(45deg);
+    top:8px;
+}
+.m_menuBtn.on .m_menuBtn_line2 {
+    transform: rotate(-45deg);
+    top:8px;    
+}
+
+
+main {
+
+}
+.main_full {}
+
+.main_visual {    
+    width: 100%;
+    height: 100vh;
+    position: relative; /*main_text_container포지션의 기준*/
+
+}
+.main_visual video {  /*비디오나 그림이 꽉차게 할때 부모영역을 설정하고 가로 세로 설정할것*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*비디오나 그림이 꽉차게 할때*/
+    
+}
+.main_text_container {    
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);/*나자신의 반만큼 이동해서 가운데 맞춤*/
+    text-align: center;
+
+
+}
+.main_text {
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 6px 2px 5px rgba(0,0,0,0.9);
+    margin-bottom: 30px;
+}
+.main_text_reservation {
+    display: none;
+
+}
+.main_text_reservation a {}
+
+
+section {}
+
+.con1, .con2 {
+    width: 1480px;
+    margin: 50px auto 30px;
+    padding: 30px;    
+    border: 1px solid red;
+}
+
+
